@@ -1,0 +1,26 @@
+<head>
+  <title>meteor-email</title>
+</head>
+
+<body>
+  <h1>Meteor email sender!</h1>
+
+  {{> form }}
+
+  {{> emails }}
+</body>
+
+<template name="form">
+  <form class="email-form">
+    <input type="email" placeholder="Recipient"/>
+    <input type="submit" value="Send Hello World" />
+  </form>
+</template>
+
+<template name="emails">
+  <ul>
+  {{#each emails}}
+    <li>{{recipient}} - {{status}}</li>
+  {{/each}}
+  </ul>
+</template>
