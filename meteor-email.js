@@ -32,8 +32,6 @@ if (Meteor.isServer) {
 
   Meteor.methods({
     sendEmail: function(recipient) {
-      console.log(recipient)
-
       check(recipient, String);
 
       email = {
