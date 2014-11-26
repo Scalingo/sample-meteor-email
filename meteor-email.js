@@ -49,8 +49,8 @@ if (Meteor.isServer) {
       Email.send({
         from: process.env.EMAIL_FROM,
         to: email.recipient,
-        subject: "Hello " + email.recipient,
-        text: "Hello " + email.recipient
+        subject: "Test email to " + email.recipient,
+        text: "Hello " + email.recipient + "\n\nThis is a simple test email sent from https://meteor-test.appsdeck.eu\n"
       });
 
       email.status = "Sent"
